@@ -341,7 +341,7 @@ body::-webkit-scrollbar-thumb {
 #about .image:hover + .image-under{
     margin-left: 615px;
     margin-top: 45px;
-}
+} 
 
 /*--------------- featured projects -------------*/
 
@@ -382,39 +382,37 @@ body::-webkit-scrollbar-thumb {
 }
 
 #projects .image{
-    background-image: url("images/proj3-tint.png");
+    background-image: url("images/man vs computer tint.png");
     background-position: center;
     background-size: cover;
     width: 575px;
     height: 360px;
     border-radius: 5px;
-    box-shadow: 0px 0px 87px -13px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.6);
     cursor: pointer;
 }
 
 #projects .image:hover{
-    background-image: url("images/proj3.png");
+    background-image: url("images/man vs computer.png");
     transition: 0.3s;
 }
 
 #projects .image2{
-    height: 431px;
-    margin-left: 450px;
-    background-image: url("images/proj2-tint.png");
+    margin-left: 430px;
+    background-image: url("images/stat-TPG tint.png");
 }
 
 #projects .image2:hover{
-    background-image: url("images/proj2.png");
+    background-image: url("images/stat-TPG.png");
     transition: 0.3s;
 }
 
 #projects .image3{
-    height: 431px;
-    background-image: url("images/proj-tint.png");
+    background-image: url("images/weather app tint.png");
 }
 
 #projects .image3:hover{
-    background-image: url("images/proj.png");
+    background-image: url("images/weather app.png");
     transition: 0.3s;
 }
 
@@ -494,7 +492,11 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
 }
 
-#projects .links li:hover{
+#projects .links a {
+    color: #CCD6F6;
+}
+
+#projects .links a:hover{
     color: #64FFDA;
     transition: 0.3s;
 }
