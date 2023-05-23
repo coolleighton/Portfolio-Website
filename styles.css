@@ -1,0 +1,989 @@
+html{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #0A192F;
+    color: #CCD6F6;
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 0;
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+  
+body::-webkit-scrollbar-track {
+    background:#0A192F;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(73, 86, 112);
+    border-radius: 8px;
+    border: #0A192F solid 3px;
+}
+
+/*------------ Navbar --------------*/
+
+#navbar{
+    height: 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #0a192f;
+    transition: 0.5s;
+}
+
+#navbar.hide{
+    top: -100px;
+    transition: 0.5s;
+}
+
+#navbar .container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+#navbar img{
+    width: 45px;
+    height: 45px;
+    margin: auto 20px;
+    cursor: pointer;
+}
+
+#navbar img:hover{
+    transform: scale(1.1);
+    transition: 0.5 ease-in;
+}
+
+#navbar div{
+    margin: 0px 40px 0px 35px;
+}
+
+#navbar ul{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 0;
+}
+
+#navbar li{
+    text-decoration: none;
+    list-style: none;
+    padding-right: 50px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#navbar a:hover{
+    color:#64FFDA;
+    transition: 0.5s;
+}
+
+#navbar span{
+    color: #64FFDA;
+}
+
+#navbar button{
+    cursor: pointer;
+    background-color: #0A192F;
+    color: #64FFDA;
+    font-size: 13px;
+    padding: 15px;
+    border: 1px solid #64FFDA;
+    border-radius: 5px;
+    font-family: 'IBM Plex Mono', monospace;
+    transition: all 0.5s ease;
+}
+
+#navbar button:hover{
+    background-color: rgb(19, 48, 64);
+}
+
+#navbar a{
+    text-decoration: none;
+    color: #CCD6F6;
+}
+
+#navbar .burger-menu{
+    color: #64FFDA;
+    font-size: 50px;
+}
+
+.shadow{
+    box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.3);
+}
+
+#mobile{
+    display: none;
+}
+
+#close{
+    display: none;
+}
+
+/*---------- Side Bars -----------*/
+
+#side-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    right: -280px;
+    align-items: center;
+    transform: rotate(90deg);
+}
+
+#side-bar div{
+    border-top: 1px solid #8892B0;
+    width: 400px;
+    height: 0;
+}
+
+#side-bar p{
+    padding-right: 20px;
+    font-size: 15px;
+    color: #8892B0;
+    cursor: pointer;
+}
+
+#side-bar a{
+    text-decoration: none;
+}
+
+#side-bar p:hover{
+    color: #64FFDA;
+    transition: 0.3s;
+}
+
+#side-bar2{
+    position: fixed;
+    align-items: center;
+    display: flex;
+    bottom: 0px;
+    align-items: center;
+    transform: rotate(90deg);
+    left: -220px;
+}
+
+#side-bar2 a{
+    color: #8892B0;
+}
+
+#side-bar2 .line{
+    border-top: 1px solid #8892B0;
+    width: 350px;
+    height: 0;
+}
+
+#side-bar2 .links{
+    padding-right: 40px;
+    color: #8892B0;
+}
+
+#side-bar2 .links svg{
+    cursor: pointer;
+    transform: rotate(270deg);
+    font-size: 22px;
+    margin-left: 20px;
+}
+
+#side-bar2 .links svg:hover{
+    transition: all 0.3s ease;
+    color: #64FFDA;
+}
+
+/*-------------- hero ------------*/
+
+#hero{
+    padding-top: 225px;
+    width: 1000px;
+    margin: auto;
+}
+
+#hero .p-top{
+    color: #64FFDA;
+    font-size: 17px;
+    margin-bottom: -50px;
+}
+
+#hero h1{
+    line-height: 90px;
+    font-size: 70px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+#hero h1 span{
+    color: #8892B0;
+}
+
+#hero .p-bot{
+    margin-top: -30px;
+    color:#8892B0;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    width: 60%;
+}
+
+#hero .p-bot span{
+    color: #64FFDA;
+}
+
+#hero button{
+    margin-top: 50px;
+    cursor: pointer;
+    background-color: #0A192F;
+    color: #64FFDA;
+    font-size: 14px;
+    padding: 20px 30px 20px 30px;
+    border: 1px solid #64FFDA;
+    border-radius: 5px;
+    font-family: 'IBM Plex Mono', monospace;
+    transition: all 0.5s ease;
+}
+
+#hero button:hover{
+    background-color: rgb(19, 48, 64);
+}
+
+/*----------- About Me ------------*/
+
+#about{
+    padding-top: 100px;
+    width: 900px;
+    margin: 200px auto;
+}
+
+#about .title{
+    display: flex;
+}
+
+#about .title h2{
+    color: #64FFDA;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#about .title span{
+    font-family: 'Poppins', sans-serif;
+    color:#CCD6F6;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#about .line{
+    width: 40%;
+    height: 0px;
+    margin: auto 20px;
+    border: #162e52 1px solid;
+}
+
+#about .desc{
+    display: flex;
+}
+
+#about .desc p{
+    margin: 20px 50px 20px 0px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    color: #8892B0;
+    width: 550px;
+}
+
+#about .desc li{
+    color: #8892B0;
+    font-size: 13px;
+    padding: 5px 0;
+    list-style:none
+}
+
+#about .desc svg{
+    color: #64FFDA;
+}
+
+#about .desc span{
+    color: #64FFDA;
+}
+
+#about .image{
+    background-image: url('images/me-tinted.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 30px;
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    z-index: 1; 
+    transition: all 0.5s ease;
+}
+
+#about .image:hover{
+    background-image: url('images/me.jpg');
+}
+
+#about .image-under{
+    border: #64FFDA 2px solid;
+    margin-top: 55px;
+    width: 298px;
+    height: 298px;
+    border-radius: 5px;
+    position: absolute;
+    margin-left: 625px;
+    transition: all 0.5s ease;
+}
+
+#about .image:hover + .image-under{
+    margin-left: 615px;
+    margin-top: 45px;
+}
+
+/*--------------- featured projects -------------*/
+
+#projects{
+    padding-top: 100px;
+    width: 1000px;
+    margin: auto;
+    margin-bottom: 300px;
+}
+
+#projects .card{
+    margin-bottom: 100px;
+}
+
+#projects .title{
+    display: flex;
+}
+
+#projects .title h2{
+    color: #64FFDA;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 30px 0;
+}
+
+#projects .title span{
+    font-family: 'Poppins', sans-serif;
+    color:#CCD6F6;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#projects .line{
+    width: 40%;
+    height: 0px;
+    margin: auto 20px;
+    border: #162e52 1px solid;
+}
+
+#projects .image{
+    background-image: url("images/proj3-tint.png");
+    background-position: center;
+    background-size: cover;
+    width: 575px;
+    height: 360px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 87px -13px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+
+#projects .image:hover{
+    background-image: url("images/proj3.png");
+    transition: 0.3s;
+}
+
+#projects .image2{
+    height: 431px;
+    margin-left: 450px;
+    background-image: url("images/proj2-tint.png");
+}
+
+#projects .image2:hover{
+    background-image: url("images/proj2.png");
+    transition: 0.3s;
+}
+
+#projects .image3{
+    height: 431px;
+    background-image: url("images/proj-tint.png");
+}
+
+#projects .image3:hover{
+    background-image: url("images/proj.png");
+    transition: 0.3s;
+}
+
+#projects .desc{
+    display: flex;
+    font-size: 13px;
+    justify-content: space-between;
+}
+
+#projects .text{
+    text-align: right;
+    position: absolute;
+    margin-left: 490px;
+}
+
+#projects .text2{
+    text-align: left;
+    margin-left: 0;
+}
+
+#projects .text h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    line-height: 35px;
+}
+
+#projects .feature{
+    color: #64FFDA;
+    line-height: 0;
+}
+
+#projects .box {
+    width: 475px;
+    background-color: #112240;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    color: #8892B0;
+    font-size: 15px;
+}
+
+#projects .box span{
+    color: #64FFDA;
+}
+
+#projects .tech-stack{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    color: #8892B0;
+}
+
+#projects .tech-stack2{
+    justify-content: flex-start;
+    margin-left: -45px;
+}
+
+#projects .links{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end
+}
+
+#projects .links2{
+    justify-content: flex-start;
+    margin-left: -45px;
+}
+
+#projects .tech-stack li{
+    padding: 10px 10px;
+    text-align: right;
+}
+
+#projects .links li{
+    padding: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#projects .links li:hover{
+    color: #64FFDA;
+    transition: 0.3s;
+}
+
+/*---------------- side projects ---------------*/
+
+#side-projects {
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+#side-projects .container h2{
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 20px;
+}
+
+#side-projects .container p{
+    color: #64FFDA;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+#side-projects .project-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#side-projects .card{
+    background-color:#112240;
+    margin: 8px;
+    width: 235px;
+    height: 235px;
+    border-radius: 8px;
+    text-align: left;
+    padding: 40px;
+    transition: all 0.3s ease;
+}
+
+#side-projects .icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#side-projects .folder {
+    font-size: 40px;
+    color: #64FFDA;
+}
+
+#side-projects .link {
+    font-size: 25px;
+}
+
+#side-projects .link:hover {
+    color: #64FFDA;
+    transition: 0.3s;
+}
+
+#side-projects .card h3{
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 10px;
+    transition: all 0.3s ease;
+}
+
+#side-projects .card p{
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    color: #8892B0;
+    margin: 0;
+    
+}
+
+#side-projects .card ul{
+    display: flex;
+    text-align: left;
+    margin: 0;
+    padding: 20px 0;
+}
+
+#side-projects .card li{
+    font-size: 11px;
+    list-style: none;
+    color: #8892B0;
+    padding-right: 20px;
+}
+
+#side-projects .card:hover{
+    transform: translateY(-10px);
+}
+
+#side-projects .card:hover h3{
+    color:#64FFDA;
+}
+
+#side-projects button{
+    margin-top: 50px;
+    cursor: pointer;
+    background-color: #0A192F;
+    color: #64FFDA;
+    font-size: 14px;
+    padding: 20px 30px 20px 30px;
+    border: 1px solid #64FFDA;
+    border-radius: 5px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+#side-projects button:hover{
+    background-color: rgb(19, 48, 64);
+    transition: 0.5s;
+}
+
+/*------------------ contact -------------------*/
+
+#contact {
+    padding-top: 230px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 600px;
+    margin: auto;
+}
+
+#contact .p-top{
+    color: #64FFDA;
+    font-size: 15px;
+    line-height: 0;
+}
+
+#contact h2{
+    font-family: 'Poppins', sans-serif;
+    line-height: 0;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+#contact .p-bot{
+    color: #8892B0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+
+#contact li {
+    list-style: none;
+    text-align: left;
+    color: #8892B0;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#contact svg{
+    color: #64FFDA;
+}
+
+#contact button{
+    cursor: pointer;
+    background-color: #0A192F;
+    color: #64FFDA;
+    font-size: 14px;
+    width: 300px;
+    margin: 40px auto;
+    padding: 20px 30px 20px 30px;
+    border: 1px solid #64FFDA;
+    border-radius: 5px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+#contact button:hover{
+    background-color: rgb(19, 48, 64);
+    transition: 0.5s;
+}
+
+#contact .footer{
+    margin-top: 200px;
+    font-size: 13px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: #8892B0;
+}
+
+#contact .footer:hover{
+    color: #64FFDA;
+    transition: 0.3s;
+}
+
+/*----------- responsive -----------*/
+
+@media (max-width: 1080px) {
+
+    #mobile{
+        display:flex
+    }
+
+    #navbar ul{  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        right: -50%;
+        height: 100%;
+        width: 50%;
+        padding: 0;
+        margin: 0;
+        background-color: #112240;
+        z-index: 999;
+        transition: 0.3s;
+    }
+
+    #navbar .active{
+        right: 0px;
+    }
+
+    #close{
+        display: initial;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    #close svg{
+        color: #64FFDA;
+        font-size: 50px;
+    }
+
+    #navbar li{
+        font-size: 20px;
+        padding: 80px 0 0 0;
+        white-space: pre-line;
+        text-align: center;
+    }
+
+    #navbar span{
+        font-size: 17px;
+    }
+
+    #navbar button{
+        margin: 120px 0 50px 0;
+        font-size: 20px;
+        background-color: #112240;
+    }
+
+    #side-bar{
+        display: none;
+    }
+
+    #side-bar2{
+        display: none;
+    }
+
+    #hero,
+    #about,
+    #projects,
+    #contact,
+    #side-projects
+    {
+        width: 700px;
+    }
+
+    #hero .p-bot{
+        font-size: 25px;
+    }
+
+    #hero button{
+        width: 200px
+    }
+
+    #about .image-under{
+        margin-left: 450px;
+        width: 250px;
+        height: 250px;
+    }
+
+    #about .image:hover + .image-under{
+        margin-left: 435px;
+        margin-top: 45px;
+        transition: 0.3s;
+    }
+
+    #about .image{
+        width: 250px;
+        height: 250px;
+    }
+
+    #about .desc p{
+        width: 375px;
+    }
+    
+    #projects .image{
+        margin-top: 45px;
+        width: 300px;
+        height: 185px;
+    }
+
+    #projects .text{
+        margin-left: 180px;
+    }
+
+    #projects .text2{
+        margin-left: 0;
+    }
+
+    #projects .image2{
+        margin-left: 395px;
+        height: 220px;
+    }
+
+    #projects .image3{
+        height: 220px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    #hero,
+    #about,
+    #projects,
+    #contact,
+    #side-projects
+    {
+        width: 80%;
+    }
+
+    #hero .p-top{
+        padding-bottom: 40px;
+    }
+
+    #hero h1{
+        font-size: 50px;
+        line-height: 60px;
+        padding-bottom: 30px;
+    }
+
+    #hero .p-bot{
+        font-size: 20px;
+    }
+
+    #about .desc{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about .desc p{
+        width: 100%;
+    }
+
+    #about .image-under{
+     display: none;
+    }
+
+    #about .image:hover + .image-under{
+        margin-left: 30px;
+        margin-top: 625px;
+        transition: 0.3s;
+    }
+
+    #projects .image{
+       display: none;
+    }
+
+    #projects .card{
+        margin-bottom: 400px;
+    }
+
+    #projects .text{
+        margin-left: 0;
+        text-align: left;
+    }
+
+    #projects .tech-stack{
+        justify-content: flex-start;
+        margin-left: -45px;
+    }
+
+    #projects .links{
+        justify-content: flex-start;
+        margin-left: -45px;
+    }
+
+    #projects .box {
+        width: 80%;
+
+    }
+
+    #projects .linehide{
+        width: 60px;
+    }
+
+    #side-projects .project-grid{
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 500px) {
+    #navbar img{
+        margin-left: 0;
+    }
+
+    #hero h1{
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    #hero{
+        padding-top: 100px;
+    }
+
+    #hero .p-top{
+        font-size: 13px;
+    }
+
+    #hero .p-bot{
+        font-size: 13px;
+    }
+
+    #hero button{
+        margin-top: 10px;
+    }
+
+    #about .line {
+        display: none;
+    }
+
+    #about{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #projects{
+        margin-top: 0;
+    }
+
+    #projects .line {
+        display: none;
+    }
+
+    #projects .tech-stack{
+        flex-wrap: wrap;
+    }
+
+    #projects .box{
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    #projects .card{
+        margin-bottom: 500px;
+    }
+
+    #side-projects .container h2{
+        line-height: 30px;
+    }
+
+    #side-projects .card{
+        height: 350px;
+    }
+
+    #side-projects .card{
+        flex-wrap: wrap;
+    }
+
+    #side-projects .card h3{
+        line-height: 25px;
+    }
+
+    #contact button{
+        width: 200px;
+    }
+
+    #contact h2{
+        font-size: 40px;
+        line-height: 50px;
+        margin: 20px 0 0 0;
+    }
+
+    #contact li{
+        font-size: 11px;
+    }
+
+    #contact .p-top{
+        margin: 0;
+    }
+}
+
+
+  
