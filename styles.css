@@ -545,6 +545,13 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
 }
 
+#side-projects .icons a, 
+#side-projects .icons a:visited, 
+#side-projects .icons a:active,
+#side-projects .icons a:focus{
+    color: inherit;
+}
+
 #side-projects .folder {
     font-size: 40px;
     color: #64FFDA;
@@ -557,6 +564,7 @@ body::-webkit-scrollbar-thumb {
 #side-projects .link:hover {
     color: #64FFDA;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 #side-projects .card h3{
