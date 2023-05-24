@@ -144,6 +144,7 @@ body::-webkit-scrollbar-thumb {
     height: 0;
 }
 
+#side-bar2 p,
 #side-bar p{
     padding-right: 20px;
     font-size: 15px;
@@ -151,10 +152,16 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
 }
 
+#side-bar2 a,
 #side-bar a{
     text-decoration: none;
 }
 
+#side-bar2 a:visited {
+    text-decoration: none;
+}
+
+#side-bar2 p:hover,
 #side-bar p:hover{
     color: #64FFDA;
     transition: 0.3s;
@@ -167,34 +174,14 @@ body::-webkit-scrollbar-thumb {
     bottom: 0px;
     align-items: center;
     transform: rotate(90deg);
-    left: -220px;
+    left: -200px;
 }
 
-#side-bar2 a{
-    color: #8892B0;
-}
 
 #side-bar2 .line{
     border-top: 1px solid #8892B0;
     width: 350px;
     height: 0;
-}
-
-#side-bar2 .links{
-    padding-right: 40px;
-    color: #8892B0;
-}
-
-#side-bar2 .links svg{
-    cursor: pointer;
-    transform: rotate(270deg);
-    font-size: 22px;
-    margin-left: 20px;
-}
-
-#side-bar2 .links svg:hover{
-    transition: all 0.3s ease;
-    color: #64FFDA;
 }
 
 /*-------------- hero ------------*/
@@ -687,6 +674,7 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 20px;
     cursor: pointer;
     color: #8892B0;
+    text-decoration: none;
 }
 
 #contact .footer:hover{
