@@ -386,11 +386,11 @@ body::-webkit-scrollbar-thumb {
 
 #projects .image2{
     margin-left: 430px;
-    background-image: url("images/stat-TPG tint.png");
+    background-image: url("images/library-tint.png");
 }
 
 #projects .image2:hover{
-    background-image: url("images/stat-TPG.png");
+    background-image: url("images/library.png");
     transition: 0.3s;
 }
 
